@@ -1,0 +1,18 @@
+@import '../styles';
+.container{
+  display: grid;
+  grid-template-columns: 300px minmax(300px,1fr);
+  height: 100%;
+}
+
+.aside{
+  grid-column: 1/2;
+  min-height: 100vh;
+  height: 100%;
+  padding-top: 1.3rem;
+}
+
+.mainContent{
+  grid-column: 2/3;
+  padding-top: 1.3rem;
+}

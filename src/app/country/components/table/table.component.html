@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <th class="table__header">#</th>
+    <th class="table__header">flag</th>
+    <th class="table__header">country</th>
+    <th class="table__header">capital</th>
+    <th class="table__header">population</th>
+    <th class="table__header"></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries,let i =index">
+      <td class="table__description">{{i + 1}}</td>
+      <td class="table__description"><img class="table__img" [src]="country.flag" alt="'flag of {{country.name}}'"></td>
+      <td class="table__description">{{country.name}}</td>
+      <td class="table__description">{{country.capital}}</td>
+      <td class="table__description">{{country.population|number}}</td>
+      <td class="table__description"><a [routerLink]="['/country',country.alpha2Code]">See more...</a></td>
+    </tr>
+  </tbody>
+</table>

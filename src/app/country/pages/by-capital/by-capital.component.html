@@ -1,0 +1,16 @@
+<h2 class="content__tittle">By capital</h2>
+<div class="separator"></div>
+<div class="content__searchbar">
+  <app-searchbar (OnEnter)="Search($event)" (OnDebounce)="Suggestions($event)" placeholder="Search capital..."></app-searchbar >
+</div>
+<ul class="suggestions animate__animated  animate__fadeIn" *ngIf="suggestions.length != 0">
+  <li class="suggestion__items" *ngFor="let suggestion of suggestions" [routerLink]="['/country',suggestion.alpha2Code]">{{suggestion.capital}} , {{suggestion.name}}</li>
+  <li class="suggestion__items" (click)="Search(term)">Buscar "{{term}}"</li>
+</ul>
+<div class="separator"></div>
+<div class="alert" *ngIf="error">
+  Nothing was found with the entered term {{term |uppercase}}. 
+</div>
+<div class="content__pages animate__animated  animate__fadeIn" *ngIf="countries.length > 0">
+  <app-table [countries]="countries"></app-table>
+</div>

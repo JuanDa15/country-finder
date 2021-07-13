@@ -1,0 +1,57 @@
+@import '../../../../styles';
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+
+  tbody{
+    tr{
+      &:nth-of-type(2n){
+        background-color: rgb(226, 226, 226);
+      }
+    }
+  }
+}
+
+.table__description{
+  text-transform: capitalize;
+  padding: .4rem .8rem;
+  border-bottom: 1px solid #2c666e4f;
+  line-height: 1.6rem;
+  text-align: left;
+
+  &:nth-child(1){
+    text-align: center;
+  }
+
+  &:nth-child(2){
+    text-align: center;
+  }
+
+  &:nth-child(6){
+
+    a{
+      text-align: center;
+      cursor: pointer;
+      color: $ming;
+      font-weight: 900;
+      text-decoration: none;
+
+      &:hover{
+        color: $rich_black;
+      }
+    }
+  }
+}
+
+.table__header{
+  padding: .4rem .6rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid black;
+  line-height: 1.5rem;
+}
+
+.table__img{
+  width: 60px;
+  height: 30px;
+}

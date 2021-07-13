@@ -1,0 +1,17 @@
+@import '../../../../styles';
+
+input{
+  width: 100%;
+  line-height: 2.3rem;
+  border-radius: .5rem;
+  border: 1px solid #2c666e54;
+  padding: 0 .7rem;
+  background-color: inherit;
+  font-weight: 700;
+  box-sizing: border-box;
+
+  &:focus{
+    outline: 3px solid $ming;
+    -moz-outline-radius: .5rem;
+  }
+}

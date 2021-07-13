@@ -1,0 +1,47 @@
+@import '../../../styles';
+
+.aside__tittle{
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.keypad{
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 90%;
+  border: 1px solid #2c666e2f;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.button{
+  line-height: 2.5rem;
+  padding: 0 .7rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.button__separator{
+  border-bottom: 1px solid #2c666e2f;
+}
+
+.separator{
+  height: 0px;
+  width: 90%;
+  margin: 1rem auto;
+  border:  1px solid #2c666e4f;
+  border-radius: 50%;
+}
+
+
+.active{
+  border-radius: .2rem;
+  background-color: $rich_black;
+  color: $isabelline;
+}

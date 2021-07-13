@@ -1,0 +1,60 @@
+<div class="loading" *ngIf="!country; else information">
+  Please wait, loading information
+</div>
+<ng-template #information>
+  <div class="country__info" >
+    <h1 class="country__tittle">Country: {{country.name}}</h1>
+    <div class="main__info">
+      <div class="flag__info">
+        <h2>Flag:</h2>
+        <img [src]="country.flag" [alt]="country.name">
+      </div>
+      <div class="cosa">
+        <span class="capital">Capital: {{country.capital}}</span>
+        <span class="region">Region: {{country.region}}</span>
+        <span class="population">population: {{country.population |number}}</span>
+      </div>
+    </div>
+    <div class="codes">
+      <h2>Codes:</h2>
+      <ul>
+        <li title="alpha code 2">{{country.alpha2Code}}</li>
+        <li title="alpha code 3">{{country.alpha3Code}}</li>
+        <li title="calling code">{{country.callingCodes}}</li>
+      </ul>
+    </div>
+    <div class="currencies">
+      <h2>Currency: </h2>
+      <div class="C__container">
+        <div class="currency" *ngFor="let currency of country.currencies">
+          <p>Name: <span>{{currency.name}}</span></p>
+          <p>Code: <span>{{currency.code}}</span></p>
+          <p>Symbol: <span>{{currency.symbol}}</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="translations">
+      <h2>Translations: </h2>
+      <div class="T__container">
+        <span title="German">{{country.translations.de}}</span>
+        <span title="Spanish">{{country.translations.es}}</span>
+        <span title="French">{{country.translations.fr}}</span>
+        <span title="Japanese">{{country.translations.ja}}</span>
+        <span title="Italian">{{country.translations.it}}</span>
+        <span title="Breton">{{country.translations.br}}</span>
+        <span title="Portuguese">{{country.translations.pt}}</span>
+        <span title="Dutch">{{country.translations.nl}}</span>
+        <span title="Croatian">{{country.translations.hr}}</span>
+        <span title="Persian">{{country.translations.fa}}</span>
+      </div>
+    </div>
+    <div class="languages">
+      <h2>Languages: </h2>
+      <div class="L__container">
+        <div class="language" *ngFor="let language of country.languages">
+          <span>{{language.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

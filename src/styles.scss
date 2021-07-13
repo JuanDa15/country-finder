@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+$rich_black-Fogra39: #0a090c;
+$isabelline: #F0EDEE;
+$rich_black: #07393C;
+$ming: #2C666E;
+$middle_blue: #90ddf0;
+
+*{
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $isabelline;
+}

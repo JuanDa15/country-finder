@@ -1,0 +1,83 @@
+@import '../../../../styles';
+
+h3{
+  display: block;
+  width: 80%;
+  margin: .5rem auto .5rem .5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content__pages{
+  width: 80%;
+  margin: 0 auto .5rem .5rem;
+  box-sizing: border-box;
+}
+
+.separator{
+  height: 0px;
+  width: 80%;
+  margin: 1rem auto 1rem .5rem;
+  border:  1px solid #2c666e4f;
+  border-radius: 50%;
+}
+
+.content__tittle{
+  display: block;
+  width: 80%;
+  margin: 0 auto 0 .5rem;
+  font-size: 2rem;
+  font-weight: 600;
+
+  
+  span{
+    color: $ming;
+  }
+}
+
+.button{
+  border-radius: .5rem;
+  border: none;
+  padding: .4rem .8rem;
+  cursor: pointer;
+  margin-right: .4rem;
+  margin-bottom: .4rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.keyPad{
+  margin: 0 auto 0 .5rem;
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+
+  .unactive{
+    border: 1px solid $ming;
+    color: $ming;
+    transition: background-color 300ms ease, color 300ms ease;
+
+    &:hover{
+      background-color: $ming;
+      color: $isabelline;
+    }
+  }
+}
+
+.active{
+  transition: background-color 300ms ease, color 300ms ease;
+  color: $isabelline;
+  background-color: $ming;
+}
+
+@media screen and (max-width:1200px){
+  .content__pages{
+    width: 95%;
+  }
+
+  .keyPad{
+    width: 95%;
+  }
+}

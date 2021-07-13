@@ -1,0 +1,21 @@
+<h2 class="content__tittle">By region <span>{{activeRegion | titlecase}}</span></h2>
+<div class="separator"></div>
+
+<h3>Select a region:</h3>
+<div class="keyPad">
+  <!-- [class.active]="region === activeRegion" -->
+  <!-- [ngClass]="{
+    'active': region === activeRegion,
+    'unactive': region !== activeRegion
+  }" -->
+  <!-- [class]="(region === activeRegion)? 'button active': 'button unactive'" -->
+  <button 
+  [class]="getCSSClass(region)"
+  *ngFor="let region of regions" 
+  (click)="Search(region)">
+    {{region |titlecase}}
+  </button>
+</div>
+<div class="content__pages animate__animated  animate__fadeIn" *ngIf="countries.length > 0">
+  <app-table [countries]="countries"></app-table>
+</div>
