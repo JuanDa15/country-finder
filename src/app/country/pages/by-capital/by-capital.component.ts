@@ -56,7 +56,6 @@ export class ByCapitalComponent implements OnInit {
           }
         )
     }
-    console.log(event);
   }
 
 }

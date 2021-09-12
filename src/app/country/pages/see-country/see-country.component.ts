@@ -19,14 +19,7 @@ export class SeeCountryComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.activatedRoute.params
-      .pipe(
-        switchMap((param) => this.countryService.getCountry(param.id))
-        )
-      .subscribe(
-        (resp:Country) => {
-          this.country = resp;
-        });
+    this.getCountryInfo();
 
     // this.activatedRoute.params
     //   .subscribe(
@@ -39,7 +32,17 @@ export class SeeCountryComponent implements OnInit {
     //       )
     //     }
     //   )
+  }
 
+  getCountryInfo(){
+    this.activatedRoute.params
+      .pipe(
+        switchMap((param) => this.countryService.getCountry(param.id))
+        )
+      .subscribe(
+        (resp:Country) => {
+          this.country = resp;
+        });
   }
 }
 
